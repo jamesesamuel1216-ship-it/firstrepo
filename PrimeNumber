@@ -1,1 +1,15 @@
 #get a user input and work out if it is prime or not
+number=int(input("Enter number here: "))
+def is_prime(number):
+    if number<2:
+        return False
+    for i in range(2,number-1):
+        if number/i == int(number/i):
+            return False
+        else:
+            continue
+    return True
+if is_prime(number)==True:
+    print(f"{number} is prime")
+if is_prime(number)==False:
+    print(f"{number} is not prime")
